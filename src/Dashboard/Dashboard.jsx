@@ -61,7 +61,7 @@ const Dashboard = () => {
       setLoading(true);
       try {
         const res = await fetch(
-          `https://payment-assignment.onrender.com/transactions?page=${page}&limit=${limit}`
+          `${import.meta.env.VITE_TRANSACTIONS_API_URL}?page=${page}&limit=${limit}`
         );
         const data = await res.json();
 

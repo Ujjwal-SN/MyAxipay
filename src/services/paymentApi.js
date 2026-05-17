@@ -26,7 +26,7 @@ expiryYear: "20" + formData.expiryYear,
   console.log("PAYLOAD:", payload);
 
   const response = await fetch(
-    "https://payment-assignment.onrender.com/initiate-payment",
+    `${import.meta.env.VITE_PAYMENT_API_URL}`,
     {
       method: "POST",
       headers: {

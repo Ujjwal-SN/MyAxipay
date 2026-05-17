@@ -14,7 +14,7 @@ export const generateHash = (email, cardNumber) => {
   const message =
     (reversedEmail + "AXIPAYS" + reversedCard).toUpperCase();
 
-  const hash = CryptoJS.HmacSHA256(message, "AXI2026")
+  const hash = CryptoJS.HmacSHA256(message, import.meta.env.VITE_HASH_SECRET)
     .toString(CryptoJS.enc.Hex)
      .toUpperCase();
 
